@@ -1,20 +1,24 @@
-#include<iostream> 
-#include<vector> 
+#include<iostream>
 using namespace std ; 
 int main()
-{ 
-    int numbers [] = { 10,20,30,40,50 }; //declaration and initialization of array
-    //calculating size of array 
-    int size =sizeof(numbers)/sizeof(numbers[0]) ;
-    cout<<" printing using a standard for loop " << endl; 
-    for (int i =0 ; i<size ; i++)
-    { 
-        cout<<numbers [i]<<""; 
-    } 
-    cout<<" printing using a range based for loop "<< endl;
-    for (int num: numbers )
-    { 
-        cout<<num<< " "; 
-    }
+{ //code to check if the number is amstrong number 
+    int n = 153 ;int a = 0  ; 
+    int b = 0 ; 
+    int originalN=n ; 
+ while ( n>0 )
+ {
+   b=  n%10 ; 
+  a = a + b*b *b ;  
+  n= n/10 ; 
+
+
+ }
+ if ( a ==originalN   )
+ {
+    cout<<" the number is amstrong number"<<endl ; 
+ }
+ else {
+    cout<<"the number is not amstrong number "<<endl ; 
+ }
  return 0 ; 
 }
