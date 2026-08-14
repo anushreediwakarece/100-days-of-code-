@@ -1,17 +1,35 @@
+/*create a uuuser class with properties :id private 
+,username (public)& password (private ). its id should be initialized in a parameterized constructor . 
+it should have getter and setter function */
 #include<iostream>
-using namespace std ; 
+#include<string>
+using namespace std; 
+class User {
+    private: 
+    int id ; //for this to initialize we have to use parameterised constructor 
+    public:
+    string username ; 
+    string password; 
+    User (int id , string ussername )//parameterised constructor 
+    {
+        this->id=id; 
+        this->username =username ; 
+        cout<<"id is "<<id<<endl;
+        cout<<"username is "<<username<<endl;
+    }
+    void setpassword(string password )//setter ans getter function 
+    {
+        this->password = password; 
+    }
+     string getpassword()
+     {
+        return password ; 
+     }
+}; 
 int main()
 {
-    int arr[5] ; 
-    int n = sizeof (arr) / sizeof(int) ; 
-    for(int i = 0 ; i<n ; i++)
-    {
-        cin>>arr[i] ; 
-
-    }
-    for(int i =0 ; i<n ; i++)
-    {
-        cout<< arr[i]<<" "; 
-    }
+    User u1(1234, "anushree ");
+    u1.setpassword("anushreeece ");
+    cout<<u1.getpassword()<<endl ; 
     return 0 ; 
 }
